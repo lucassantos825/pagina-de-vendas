@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Vendas - Alta Conversão</title>
+    <meta name="description" content="Descubra como transformar sua vida com nosso produto exclusivo. Garantia de satisfação e pagamento seguro!">
+    <meta name="keywords" content="sucesso, riqueza, liberdade financeira, produto digital, marketing digital">
+    <meta name="author" content="Lucas Henrique Souza Santos">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #000000, #333333);
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #111;
+            padding: 30px 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        section {
+            padding: 30px 20px;
+            margin: 20px auto;
+            width: 80%;
+            background: #222;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.5);
+        }
+        button {
+            background: linear-gradient(90deg, #ffd700, #ff8c00);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 22px;
+            border-radius: 8px;
+            transition: transform 0.2s, background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #ffbb00, #ff6a00);
+            transform: scale(1.1);
+        }
+        .avaliacoes {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        .avaliacao {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        #gatilhos-mentais {
+            background-color: #ffd700;
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 8px;
+            color: #000;
+        }
+        iframe {
+            width: 80%;
+            height: 315px;
+            max-width: 560px;
+            border-radius: 8px;
+        }
+        .cronometro {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #111;
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Você Está a um Passo da Transformação!</h1>
+        <p>Aproveite esta oportunidade única e comece hoje!</p>
+    </header>
+    
+    <section id="oferta">
+        <h2>Escolha Seu Plano Agora</h2>
+        <button onclick="window.location.href='https://pay.kiwify.com.br/aqsTVjz'">Acesso Completo - R$29,90</button>
+        <button onclick="window.location.href='https://pay.kiwify.com.br/CjpSMq7'">Plano Básico - R$9,90</button>
+        <button onclick="window.location.href='https://pay.kiwify.com.br/27pQ1Ns'">Plano Avançado - R$19,90</button>
+    </section>
+    
+    <section id="avaliacoes" class="avaliacoes">
+        <h2>Avaliações dos Clientes</h2>
+        <div class="avaliacao">⭐⭐⭐⭐⭐ "Mudou completamente minha visão!" - João M.</div>
+        <div class="avaliacao">⭐⭐⭐⭐⭐ "A melhor decisão que já tomei." - Maria L.</div>
+        <div class="avaliacao">⭐⭐⭐⭐⭐ "Vale cada centavo!" - Carlos R.</div>
+        <div class="avaliacao">⭐⭐⭐⭐ "Recomendo a todos!" - Fernanda S.</div>
+    </section>
+    
+    <section id="gatilhos-mentais">
+        <h2>Vagas Limitadas!</h2>
+        <p>Apenas <span id="estoque">10</span> unidades disponíveis.</p>
+        <p>Oportunidade única com preço promocional!</p>
+        <p class="cronometro" id="cronometro">00:30:00</p>
+    </section>
+    
+    <section id="video">
+        <h2>Veja Como Funciona</h2>
+        <iframe src="https://www.youtube.com/embed/YOUTUBE_ID_AQUI" frameborder="0" allowfullscreen></iframe>
+    </section>
+    
+    <section id="seguranca">
+        <h2>Compra 100% Segura</h2>
+        <p>✔ Garantia de 30 dias</p>
+        <p>✔ Pagamento seguro via Kiwify</p>
+    </section>
+    
+    <footer>
+        <p>© 2025 - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function iniciarCronometro(duracao, display) {
+            let timer = duracao, minutos, segundos;
+            setInterval(function () {
+                minutos = parseInt(timer / 60, 10);
+                segundos = parseInt(timer % 60, 10);
+                minutos = minutos < 10 ? "0" + minutos : minutos;
+                segundos = segundos < 10 ? "0" + segundos : segundos;
+                display.textContent = "Tempo restante: " + minutos + ":" + segundos;
+                if (--timer < 0) {
+                    timer = 0;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let duracao = 30 * 60, // 30 minutos em segundos
+                display = document.getElementById("cronometro");
+            iniciarCronometro(duracao, display);
+        };
+    </script>
+</body>
+</html>
